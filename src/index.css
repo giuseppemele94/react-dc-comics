@@ -96,3 +96,41 @@ background-color: #0282f9;
   color:white; 
   font-size: 15px; 
 }
+
+/* Footer */
+footer {
+background-image : url('./assets/img/footer-bg.jpg'); 
+
+padding-top: 30px;
+}
+
+.footer-nav {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.footer-col {
+  margin-right: 10px;
+}
+.footer-col h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color:white; 
+}
+
+.footer-col ul {
+    list-style-type: none;
+}
+
+.footer-col ul li a {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    padding: 0;
+    font-size: 15px; 
+    font-weight: normal;
+    color: grey;
+     
+}
