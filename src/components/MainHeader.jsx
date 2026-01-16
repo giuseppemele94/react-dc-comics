@@ -1,11 +1,11 @@
 const MainHeader = () => {
     return(
-         <header>
-            <figure>
+         <header className="header">
+            <figure className="logo">
                 <img src="/dc-logo.png" alt="Logo" />
             </figure>
             <nav>
-                <ul>
+                <ul className="nav-list">
                     <li><a href="#">CHARACTERS</a></li>
                     <li><a href="#" className="active">COMICS</a></li>
                     <li><a href="#">MOVIES</a></li>
