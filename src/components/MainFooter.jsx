@@ -1,7 +1,7 @@
 const MainFooter = () => {
     return (
         <footer>
-            <img src="" alt="" />
+            <div className="footer-bg-logo"></div>
             <nav className="footer-nav">
 
                 <div className="footer-col">
