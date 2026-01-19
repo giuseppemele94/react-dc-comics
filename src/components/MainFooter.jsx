@@ -4,67 +4,94 @@ import youtube from "../assets/img/footer-youtube.png";
 import pinterest from "../assets/img/footer-pinterest.png";
 import periscope from "../assets/img/footer-periscope.png";
 
+
 const MainFooter = () => {
+
+  //struttura dati per footer 
+  const footerSections = [
+    {
+      title: "DC COMICS",
+      links: [
+        { label: "Characters", href: "#" },
+        { label: "Comics", href: "#" },
+        { label: "Movies", href: "#" },
+        { label: "TV", href: "#" },
+        { label: "Games", href: "#" },
+        { label: "Videos", href: "#" },
+        { label: "News", href: "#" },
+      ],
+    },
+
+    {
+      title: "SHOP",
+      links: [
+        { label: "Shop DC", href: "#" },
+        { label: "Shop DC Collectibles", href: "#" },
+      ],
+    },
+
+    {
+      title: "DC",
+      links: [
+        { label: "Terms Of Use", href: "#" },
+        { label: "Privacy Policy (New)", href: "#" },
+        { label: "Ad Choices", href: "#" },
+        { label: "Jobs", href: "#" },
+        { label: "Subscriptions", href: "#" },
+        { label: "Talent Workshops", href: "#" },
+        { label: "CPSC Certificates", href: "#" },
+        { label: "Ratings", href: "#" },
+        { label: "Shop Help", href: "#" },
+        { label: "Contact Us", href: "#" },
+      ],
+    },
+
+    {
+      title: "SITES",
+      links: [
+        { label: "DC", href: "#" },
+        { label: "MAD Magazine", href: "#" },
+        { label: "DC Kids", href: "#" },
+        { label: "DC Universe", href: "#" },
+        { label: "DC Power Visa", href: "#" },
+      ],
+    },
+
+  ];
+
+
+  //funzione di rendering Link 
+function renderProdotti(arrayLink) {
+        return arrayLink.map((elementLink, index) => {
+            return (<li key={index}>
+                <a href={elementLink.href}>{elementLink.label}</a>
+            </li>)
+        })
+    }
+
   return (
     <footer className="site-footer">
-      
+
       <div className="footer-top">
         <div className="footer-bg-logo" />
 
         <nav className="footer-nav">
-          
-          <div className="footer-col">
-            <h4>DC COMICS</h4>
-            <ul className="footer-list">
-              <li><a href="#">Characters</a></li>
-              <li><a href="#">Comics</a></li>
-              <li><a href="#">Movies</a></li>
-              <li><a href="#">TV</a></li>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">News</a></li>
-            </ul>
 
-            <h4>SHOP</h4>
-            <ul className="footer-list">
-              <li><a href="#">Shop DC</a></li>
-              <li><a href="#">Shop DC Collectibles</a></li>
-            </ul>
-          </div>
+          {footerSections.map((footerSec, indice) => (
+            <div className="footer-col" key="indice">
+              <h4>{footerSec.title}</h4>
+              <ul className="footer-list">
+                {renderProdotti(footerSec.links)}
+              </ul>
 
-          
-          <div className="footer-col">
-            <h4>DC</h4>
-            <ul className="footer-list">
-              <li><a href="#">Terms Of Use</a></li>
-              <li><a href="#">Privacy Policy (New)</a></li>
-              <li><a href="#">Ad Choices</a></li>
-              <li><a href="#">Advertising</a></li>
-              <li><a href="#">Jobs</a></li>
-              <li><a href="#">Subscriptions</a></li>
-              <li><a href="#">Talent Workshops</a></li>
-              <li><a href="#">CPSC Certificates</a></li>
-              <li><a href="#">Ratings</a></li>
-              <li><a href="#">Shop Help</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
+            </div>
+          ))}
 
-          
-          <div className="footer-col">
-            <h4>SITES</h4>
-            <ul className="footer-list">
-              <li><a href="#">DC</a></li>
-              <li><a href="#">MAD Magazine</a></li>
-              <li><a href="#">DC Kids</a></li>
-              <li><a href="#">DC Universe</a></li>
-              <li><a href="#">DC Power Visa</a></li>
-            </ul>
-          </div>
+
         </nav>
       </div>
 
-      
+
       <section className="bottoms-bar">
         <div className="bottom-bar-inner">
           <button className="signup-btn">SIGN-UP NOW!</button>
