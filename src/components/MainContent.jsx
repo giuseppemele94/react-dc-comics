@@ -1,16 +1,23 @@
-import MainSectionBar from "./MainSectionBar"
-import ComicsList from "./ComicsList"
-
+import MainSectionBar from "./MainSectionBar";
+import ComicsList from "./ComicsList";
 
 const MainContent = () => {
-    return (
-        <main>
-            <section className="contents">
-            </section>
-            <ComicsList />
-            <MainSectionBar />
-        </main>
-    )
-}
+  return (
+    <main>
+      <section className="contents"></section>
 
-export default MainContent
+      {/* SEZIONE FUMETTI */}
+      <section>
+        <ComicsList />
+
+        <div className="loadmore-wrap">
+          <button className="loadmore-btn">LOAD MORE</button>
+        </div>
+      </section>
+
+      <MainSectionBar />
+    </main>
+  );
+};
+
+export default MainContent;
