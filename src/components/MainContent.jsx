@@ -1,5 +1,5 @@
 import MainSectionBar from "./MainSectionBar";
-import ComicsList from "./ComicsList";
+import ComicsList from "./comic/ComicsList";
 
 const MainContent = () => {
   return (
